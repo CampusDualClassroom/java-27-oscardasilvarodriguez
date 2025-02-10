@@ -60,8 +60,8 @@ public class Exercise27 {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("src/main/resources/shoppingList.xml"));
-            transformer.transform(source, result);
+            StreamResult targetResult = new StreamResult(new File("src/main/resources/shoppingList.xml"));
+            transformer.transform(source, targetResult);
 
             System.out.println("Archivo XML creado con éxito");
 
